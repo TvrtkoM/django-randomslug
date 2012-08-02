@@ -9,6 +9,10 @@ Installation
 
     python setup.py install
     
+or::
+
+    pip install django-randomslug
+    
 Append 'randomslug' to your INSTALLED_APPS setting
 
 Usage
