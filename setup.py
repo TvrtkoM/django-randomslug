@@ -11,4 +11,5 @@ setup(
     author = "Tvrtko Majstorovic",
     author_email = "tvrtkom@gmail.com",
     license = "MIT",
+    url = 'http://github.com/TvrtkoM/django-randomslug',
 )
