@@ -18,6 +18,7 @@ class RandomSlugField(models.Field):
     description = _("Unique Slug")
     
     def __init__(self, slug_length=10, *args, **kwargs):
+        kwargs['editable'] = False
         self.slug_length = slug_length
         if 'db_index' not in kwargs:
             kwargs['db_index'] = True
