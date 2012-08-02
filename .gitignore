@@ -3,3 +3,6 @@ dist/
 django_randomslug.egg-info/
 .project
 .pydevproject
+*pyc
+*pyo
+*~
