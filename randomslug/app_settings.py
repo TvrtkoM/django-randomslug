@@ -3,7 +3,7 @@ import re
 
 # characters to use to generate a slug
 SLUG_CHARACTERS = getattr(settings, 'RANDOMSLUG_CHARACTERS', 
-                          'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890')
+                          'abcdefghijklmnopqrstuvwxyz01234567890')
 
 # if SLUG_CHARACTERS consists of characters other than alphanumeric, hyphen or underscore,
 # ValueError exception is raised
