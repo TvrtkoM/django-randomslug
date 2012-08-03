@@ -25,7 +25,7 @@ class RandomSlugField(models.Field):
         self.validators.append(validators.RandomSlugLengthValidator(self.slug_length))
     
     def db_type(self, connection):
-        return 'varchar'
+        return 'varchar(' + str(self.slug_length) + ')'
 
     def get_internal_type(self):
         return "RandomSlugField"
