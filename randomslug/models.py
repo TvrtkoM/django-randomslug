@@ -53,5 +53,9 @@ class RandomSlugField(models.Field):
         else:
             return super(RandomSlugField, self).pre_save(model_instance, add)
 
-from south.modelsinspector import add_introspection_rules
-add_introspection_rules([], ["^randomslug\.models\.RandomSlugField"])
+try:
+    from south.modelsinspector import add_introspection_rules
+    add_introspection_rules([], ["^randomslug\.models\.RandomSlugField"])
+except ImportError:
+    pass
+
