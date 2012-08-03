@@ -65,7 +65,6 @@ class SlugifyTest(TestCase):
 class RandomSlugFieldTest(TestCase):
     def setUp(self):
         self.default = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890'
-        #self.value = "".join(random.choice(self.default) for x in range(10))
         self.pattern = r'^(?P<slug>[' + self.default + ']+)(_\d+)?$'
 
     def test_slug_length(self):
