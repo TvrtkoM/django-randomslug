@@ -53,3 +53,6 @@ class RandomSlugField(models.Field):
                 i += 1
         else:
             return super(RandomSlugField, self).pre_save(model_instance, add)
+
+from south.modelsinspector import add_introspection_rules
+add_introspection_rules([], ["^randomslug\.models\.RandomSlugField"])
