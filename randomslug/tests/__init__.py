@@ -78,3 +78,9 @@ class RandomSlugFieldTest(TestCase):
         self.assertIsNotNone(slugmodel.slug)
         self.assertEqual(sluglen(slugmodel.slug, self.default), 10)
         self.assertIsNotNone(re.match(self.pattern, slugmodel.slug))
+        
+    def test_slug_db_type(self):
+        slugfield = RandomSlugField()
+        self.assertEqual(slugfield.db_type(None), 'varchar(10)')
+        slugfield = RandomSlugField(5)
+        self.assertEqual(slugfield.db_type(None), 'varchar(5)')
