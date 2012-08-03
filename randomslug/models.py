@@ -28,7 +28,7 @@ class RandomSlugField(models.Field):
         return 'varchar'
 
     def get_internal_type(self):
-        return "UniqueSlugField"
+        return "RandomSlugField"
     
     def to_python(self, value):
         return smart_unicode(value)
