@@ -8,7 +8,6 @@ import validators
 import app_settings
 
 def slugify(value, i=None):
-    random.seed()
     slug = default_slugify(value)
     if i is not None:
         slug += "_%d" % i
